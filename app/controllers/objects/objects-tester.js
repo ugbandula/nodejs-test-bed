@@ -106,12 +106,34 @@ function extend(obj, src) {
     return obj;
 }
 
-function customMerger(src, obj) {
-    let result = {};
-    if (obj.field1) result.field1 = obj.field1;
+/**
+ * Merges two objects right to left
+ * @param target The target object where the other will get merged into
+ * @param obj    Source object
+ * @returns      An object with the following structure
+ *
+ * {
+        field1: 'value1',
+        field2: ['value21', 'value22'],
+        field3: {
+            field31: 'value31',
+            field32: 'value32'
+        }
+    }
+ */
+function customMerger(target, obj) {
+    if (obj.field1) target.field1 = obj.field1;
     if (obj.field2) {
-        result.field2 = _.union(src.field2, obj.field2);
+        target.field2 = _.union(target.field2, obj.field2);
     }
 
-    return result;
+    if (obj.field3) {
+        Object.keys(obj.field3).forEach((key, index) => {
+            if (obj.field3[key]) {
+                target.field3[key] = obj.field3[key];
+            }
+        });
+    }
+
+    return target;
 }
