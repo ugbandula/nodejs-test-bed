@@ -1,0 +1,9 @@
+/node_modules
+/app/public/bower_components
+/app/public/libs
+/minified_release
+/.idea
+/dist.dev
+/public/libs
+package-lock.json
+

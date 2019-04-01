@@ -1,0 +1,16 @@
+Mon Apr 01 2019 13:25:55 GMT+1100 (AUS Eastern Daylight Time) Server is listening on port 8099
+==================================================
+* Test Bed Services                            
+*                                                 
+  _____         _     ____           _ 
+ |_   _|__  ___| |_  | __ )  ___  __| |
+   | |/ _ \/ __| __| |  _ \ / _ \/ _` |
+   | |  __/\__ \ |_  | |_) |  __/ (_| |
+   |_|\___||___/\__| |____/ \___|\__,_|
+                                       
+-------------------------------------------------
+Object merging using custom merger:
+--------------------------------
+Result: Merge Object1 with Object2 using custom merger method
+{ field1: 'obj3Value1',
+  field2: [ 'value21', 'value22', 'obj3Value21' ] }
